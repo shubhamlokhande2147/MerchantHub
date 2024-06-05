@@ -12,7 +12,7 @@ import com.demo.model.Login;
 public interface ILoginDao extends JpaRepository<Login,Integer> {
 
     boolean existsByUsernameAndPassword(String username, String password);
-
+	
     @Modifying
     @Query(value = "UPDATE login SET password = :password WHERE email = :email", nativeQuery = true)
     int forgetPassword(@Param("password") String password, @Param("email") String email);
