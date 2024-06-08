@@ -22,6 +22,8 @@ public class LoginServiceImpl implements ILoginService {
 
     @Transactional  //Transaction Management: It simplifies transaction management by removing the need for manual handling of transactions using beginTransaction(), commit(), and rollback() statements.
     public int forgetPassword(String password, String email) {
+        System.out.println("Service - password: " + password + ", email: " + email);
+
         return ldao.forgetPassword(password, email);
     }
 

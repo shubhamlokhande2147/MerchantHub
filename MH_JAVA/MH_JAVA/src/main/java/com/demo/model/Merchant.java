@@ -18,7 +18,7 @@ public class Merchant {
     private int m_id;
     private String name;
     private String email;
-    private int mobile;
+    private String mobile;
     private String address;
     private String sell;
 
@@ -32,7 +32,7 @@ public class Merchant {
         super();
     }
 
-    public Merchant(int m_id, String name, String email, int mobile, String address, String sell) {
+    public Merchant(int m_id, String name, String email, String mobile, String address, String sell) {
         super();
         this.m_id = m_id;
         this.name = name;
@@ -66,11 +66,11 @@ public class Merchant {
         this.email = email;
     }
 
-    public int getMobile() {
+    public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(int mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 

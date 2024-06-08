@@ -16,4 +16,5 @@ public interface ILoginDao extends JpaRepository<Login,Integer> {
     @Modifying
     @Query(value = "UPDATE login SET password = :password WHERE email = :email", nativeQuery = true)
     int forgetPassword(@Param("password") String password, @Param("email") String email);
+
 }
