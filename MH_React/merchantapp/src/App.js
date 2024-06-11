@@ -1,7 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+
+
 import Login from './Components/Login';
 import ForgetPass from './Components/ForgetPass';
+import NewMerchant from './Components/NewMerchant';
+
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 
 function App() {
@@ -9,8 +13,10 @@ function App() {
     <div className="App">
      
      
-
-     <ForgetPass/>
+    
+     {/* <Login/>
+     <ForgetPass/> */}
+     <NewMerchant/>
 
 
     </div>

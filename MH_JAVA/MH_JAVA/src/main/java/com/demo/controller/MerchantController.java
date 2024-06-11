@@ -17,7 +17,7 @@ import com.demo.model.Merchant;
 
 import java.util.List;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/merchant")
@@ -34,7 +34,7 @@ public class MerchantController {
 	
 	
 	
-	@GetMapping("/merchants/{ac_id}")
+	@GetMapping("/getmerchants/{ac_id}")
 	public ResponseEntity<Merchant> getsinglemerchant(@PathVariable int ac_id) {
 		Merchant p = mservice.getById(ac_id);
 		if (p != null)
@@ -43,13 +43,7 @@ public class MerchantController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
-//	@PostMapping("/add_merchant")
-//	public ResponseEntity<String> addmerchant(@RequestBody Merchant p) {
-//		System.out.println(p);
-//		mservice.addnewmerchant(p);
-//		return ResponseEntity.ok("Data added successfully");
-//	}
-	
+
 	@PostMapping("/addmerchant")
 	public ResponseEntity<String> addmerchant(@RequestBody Merchant merchant) {
 	    System.out.println(merchant);
@@ -59,13 +53,13 @@ public class MerchantController {
 
 	
 
-	@PutMapping("/update_merchant/{ac_id}")
+	@PutMapping("/updatemerchant/{m_id}")
 	public ResponseEntity<String> updatemerchant(@RequestBody Merchant p) {
 		mservice.updateById(p);
 		return ResponseEntity.ok("Data modified successfully");
 	}
 
-	@DeleteMapping("/delete_merchant/{ac_id}")
+	@DeleteMapping("/deletemerchant/{m_id}")
 	public ResponseEntity<String> deletemerchant(@PathVariable int m_id) {
 		mservice.deleteById(m_id);
 		return ResponseEntity.ok("Data deleted successfully");

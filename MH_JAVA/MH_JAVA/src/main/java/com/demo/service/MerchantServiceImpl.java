@@ -36,15 +36,22 @@ public class MerchantServiceImpl implements IMerchantService {
 	}
 
 	@Override
-	public void updateById(Merchant p) {
-		// TODO Auto-generated method stub
-		
+	public void updateById(Merchant merchant) {
+		Optional<Merchant> op=mdao.findById(merchant.getM_id());
+		if(op.isPresent()) {
+			Merchant p = op.get();
+			p.setName(merchant.getName());
+			p.setEmail(merchant.getEmail());
+			p.setMobile(merchant.getMobile());
+			p.setAddress(merchant.getAddress());
+			p.setSell(merchant.getSell());
+			mdao.save(p);
+		}
 	}
 
 	@Override
 	public void deleteById(int m_id) {
-		// TODO Auto-generated method stub
-		
+          mdao.deleteById(m_id);		
 	}
 	
 	
