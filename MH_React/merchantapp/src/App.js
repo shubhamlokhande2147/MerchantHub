@@ -14,8 +14,8 @@ function App() {
      
      
     
-     {/* <Login/>
-     <ForgetPass/> */}
+     <Login/>
+     <ForgetPass/>
      <NewMerchant/>
 
 
