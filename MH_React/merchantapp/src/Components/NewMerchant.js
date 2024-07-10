@@ -34,7 +34,7 @@ export default function NewMerchant() {
       setStatusMessage(`Not Merchant is Added`);
     }
     } catch (error) {
-      setStatusMessage(`Error during password reset`);
+      setStatusMessage(`Error during password resetqq`);
     }
   }
 
