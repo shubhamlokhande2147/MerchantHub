@@ -33,7 +33,6 @@ public class MerchantController {
 	}
 	
 	
-	
 	@GetMapping("/getmerchants/{ac_id}")
 	public ResponseEntity<Merchant> getsinglemerchant(@PathVariable int ac_id) {
 		Merchant p = mservice.getById(ac_id);
