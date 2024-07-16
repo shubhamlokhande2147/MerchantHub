@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Merchant_Table() {
@@ -78,7 +80,7 @@ export default function Merchant_Table() {
                                 <td>{merchant.sell}</td>
                                 <td>
                                     <Button variant="success">View Bills</Button>{' '}
-                                    <Button variant="primary">Update</Button>{' '}
+                                    <Link to={"updatemerchant/"+merchant.m_id}><Button variant="primary">Update</Button>{' '}</Link>
                                     <Button variant="danger" onClick={() => deleteMerchant(merchant.m_id)}>Delete</Button>{' '}
                                 </td>
                             </tr>
