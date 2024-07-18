@@ -3,6 +3,7 @@ import { Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MainNavBar from '../../Pages/MainNavBar';
 
 export default function Merchant_Table() {
     const [data, setData] = useState([]);
@@ -55,6 +56,8 @@ export default function Merchant_Table() {
 
     return (
         <>
+                    <MainNavBar/>
+
             <h1>Merchant Table</h1>
             {data.length ? (
                 <Table striped bordered hover>
@@ -80,7 +83,7 @@ export default function Merchant_Table() {
                                 <td>{merchant.sell}</td>
                                 <td>
                                     <Button variant="success">View Bills</Button>{' '}
-                                    <Link to={"updatemerchant/"+merchant.m_id}><Button variant="primary">Update</Button>{' '}</Link>
+                                    <Link to={"updatemerchant/"+merchant.m_id}><Button variant="primary">Update</Button></Link>{' '}
                                     <Button variant="danger" onClick={() => deleteMerchant(merchant.m_id)}>Delete</Button>{' '}
                                 </td>
                             </tr>

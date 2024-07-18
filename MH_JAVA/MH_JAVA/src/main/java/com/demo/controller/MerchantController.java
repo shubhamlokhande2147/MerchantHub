@@ -51,13 +51,18 @@ public class MerchantController {
 	}
 
 	
-
 	@PutMapping("/updatemerchant/{m_id}")
-	public ResponseEntity<String> updatemerchant(@RequestBody Merchant p) {
-		mservice.updateById(p);
-		return ResponseEntity.ok("Data modified successfully");
+	public ResponseEntity<String> updatemerchant(@PathVariable("m_id") int m_id, @RequestBody Merchant p) {
+	    // Set the m_id from the URL in the Merchant object
+	    p.setM_id(m_id);
+
+	    System.out.print("controller" + p);
+	    
+	    mservice.updateById(p);
+	    return ResponseEntity.ok("Data modified successfully");
 	}
 
+	
 	@DeleteMapping("/deletemerchant/{m_id}")
 	public ResponseEntity<String> deletemerchant(@PathVariable int m_id) {
 		mservice.deleteById(m_id);

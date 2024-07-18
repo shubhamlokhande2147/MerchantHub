@@ -40,6 +40,10 @@ public class MerchantServiceImpl implements IMerchantService {
 		Optional<Merchant> op=mdao.findById(merchant.getM_id());
 		if(op.isPresent()) {
 			Merchant p = op.get();
+			
+			//System.out.print("service"+p);
+			//System.out.print("service" +merchant);
+			
 			p.setName(merchant.getName());
 			p.setEmail(merchant.getEmail());
 			p.setMobile(merchant.getMobile());
