@@ -3,6 +3,7 @@ import './App.css';
 
 import Login from './Pages/Login';
 import ForgetPass from './Pages/ForgetPass';
+import LandingPage from './Pages/LandingPage';
 
 import Home from './Components/Merchant/Home';
 import Merchant_Table from './Components/Merchant/Merchant_Table';
@@ -24,8 +25,9 @@ function App() {
      
          <Routes>
 
-          <Route path='/' element={<Home/>}></Route>
+          <Route path='/' element={<LandingPage/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
           <Route path='/forgetpass' element={<ForgetPass/>}></Route>
           <Route path='/header' element={<Header/>}></Route>
 

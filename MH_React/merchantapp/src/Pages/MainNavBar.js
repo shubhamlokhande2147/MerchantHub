@@ -56,16 +56,18 @@ export default function MainNavBar() {
               <NavLink className="nav-link" to="/home">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/table">Table</NavLink>
+              <NavLink className="nav-link" to="/newmerchant">NewMarchant</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/form">Form</NavLink>
+              <NavLink className="nav-link" to="/allmerchant">AllMerchant</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/list">List</NavLink>
             </li>
           </ul>
         </div>
+
+        
         <Button className="btn btn-light"  style={{ marginRight: '3%' }} onClick={() => navigate("/login")}>Logout</Button>
 
       </nav>

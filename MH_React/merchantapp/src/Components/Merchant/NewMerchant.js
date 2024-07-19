@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import MainNavBar from '../../Pages/MainNavBar';
 
 export default function NewMerchant() {
 
@@ -42,6 +43,7 @@ export default function NewMerchant() {
 
   return (
     <>
+     <MainNavBar/>
       <h2>New Merchant</h2>
       <form>
         <div>

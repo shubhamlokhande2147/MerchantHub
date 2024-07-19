@@ -1,10 +1,16 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import Header from './Header';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
+
+  const navigate = useNavigate();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +29,9 @@ function Login() {
 
       if (response.ok) {
         setStatusMessage(data.message); // Assuming the message is returned from the server
+      //  localStorage.setItem("user-Info",JSON.stringify(item));
+        navigate('/home'); // Navigate to the home page
+
       } else {
         setStatusMessage(`Login failed: ${data.message}`);
       }
@@ -33,6 +42,7 @@ function Login() {
 
   return (
     <div className="login-container">
+      <Header/>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
