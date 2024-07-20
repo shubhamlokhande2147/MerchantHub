@@ -82,7 +82,7 @@ export default function Merchant_Table() {
                                 <td>{merchant.address}</td>
                                 <td>{merchant.sell}</td>
                                 <td>
-                                    <Button variant="success">View Bills</Button>{' '}
+                                    <Link to={"transaction/"+merchant.m_id}><Button variant="success">View Bills</Button></Link>{' '}
                                     <Link to={"updatemerchant/"+merchant.m_id}><Button variant="primary">Update</Button></Link>{' '}
                                     <Button variant="danger" onClick={() => deleteMerchant(merchant.m_id)}>Delete</Button>{' '}
                                 </td>

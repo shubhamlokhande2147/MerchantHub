@@ -9,6 +9,8 @@ import Home from './Components/Merchant/Home';
 import Merchant_Table from './Components/Merchant/Merchant_Table';
 import NewMerchant from './Components/Merchant/NewMerchant';
 import Update_Merchant from './Components/Merchant/Update_Merchant';
+import Transaction from './Components/Merchant/Transaction';
+
 
 //import Header from './Pages/Header';
 
@@ -35,7 +37,9 @@ function App() {
           <Route path='/newmerchant' element={<NewMerchant/>}></Route>
           <Route path='/allmerchant' element={<Merchant_Table/>}></Route>
           <Route path='/allmerchant/updatemerchant/:id' element={<Update_Merchant />} />
+          <Route path='/allmerchant/transaction/:id' element={<Transaction />} />
 
+  
 
 
 
